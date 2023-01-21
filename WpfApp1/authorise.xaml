@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfApp1.authorise"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="authorise" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/1612923688_86-p-krasnii-fon-dlya-storis-107.jpg"/>
+        </Grid.Background>
+        <TextBlock HorizontalAlignment="Center" Margin="0,43,0,0" TextWrapping="Wrap" Text="Вход" VerticalAlignment="Top" FontSize="24" Background="#FFFF9191" Foreground="#FF4E0000" OpacityMask="Black" Width="156" TextAlignment="Center" Height="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="136,149,0,0" TextWrapping="Wrap" Text="Логин" VerticalAlignment="Top" FontSize="18" Background="#FFFF9191" Foreground="#FF4E0000" OpacityMask="Black" Width="155" TextAlignment="Center" Height="26"/>
+        <TextBlock HorizontalAlignment="Left" Margin="136,224,0,0" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Top" FontSize="18" Background="#FFFF9191" Foreground="#FF4E0000" OpacityMask="Black" Width="155" TextAlignment="Center" Height="26"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding Login, Mode=TwoWay}" Width="186" Height="26" Background="#FFFF9191" Foreground="#FF4E0000" FontSize="16" Visibility="Visible"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding Password, Mode=TwoWay}" Width="186" Height="26" Background="#FFFF9191" Foreground="#FF4E0000" FontSize="16"/>
+        <Button Content="Войти" HorizontalAlignment="Left" Margin="58,342,0,0" VerticalAlignment="Top" Height="35" Width="156" Background="#FFFF9191" Foreground="#FF4E0000" FontSize="18" Click="log"/>
+        <Button Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="583,342,0,0" VerticalAlignment="Top" Height="35" Width="181" Background="#FFFF9191" Foreground="#FF4E0000" FontSize="18" Click="register"/>
+        <Button Content="Добавить карту" HorizontalAlignment="Left" Margin="312,342,0,0" VerticalAlignment="Top" Height="35" Width="181" Background="#FFFF9191" Foreground="#FF4E0000" FontSize="18" Click="add"/>
+    </Grid>
+</Window>
