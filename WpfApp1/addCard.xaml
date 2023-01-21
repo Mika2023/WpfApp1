@@ -15,7 +15,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="116,217,0,0" TextWrapping="Wrap" Text="Пин-код" VerticalAlignment="Top" Width="153" Height="25" Background="#FFFF9191" Foreground="#FF4E0000" FontSize="18" TextAlignment="Center"/>
         <TextBox HorizontalAlignment="Center" Margin="0,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" Text="{Binding cardnum, Mode=TwoWay}" Height="25" Background="#FFFF9191" Foreground="#FF4E0000" SelectionBrush="#FFC8453F" FontSize="18"/>
         <TextBox HorizontalAlignment="Center" Margin="0,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" Text="{Binding Pincode, Mode=TwoWay}" Height="25" Background="#FFFF9191" Foreground="#FF4E0000" SelectionBrush="#FFC8453F" FontSize="18"/>
-        <Button Content="Поехали!" HorizontalAlignment="Center" Margin="0,279,0,0" VerticalAlignment="Top" Height="42" Width="156" Background="#FFFF9191" Foreground="#FF4E0000" FontSize="18" Click="go"/>
+        <Button Click="{Binding AddCard}" Content="Поехали!" HorizontalAlignment="Center" Margin="0,279,0,0" VerticalAlignment="Top" Height="42" Width="156" Background="#FFFF9191" Foreground="#FF4E0000" FontSize="18"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,24,0,0" TextWrapping="Wrap" Text="Приветствуем," VerticalAlignment="Top" Height="26" Width="218" FontSize="20" TextAlignment="Center" Foreground="#FFDA4D4D" FontWeight="Bold" FontFamily="Calibri Light"/>
     </Grid>
 </Window>

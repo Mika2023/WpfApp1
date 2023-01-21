@@ -14,7 +14,25 @@ namespace WpfApp1.viewmodel
         public User user { get; set; } = null!;
         public authorise Authorise { get; set; }
         public reg Reg { get; set; }
-        public AddCard addCard { get; set; }
+        public string cardnum { get;set;}
+        public string Pincode { get; set; }
+
+        RelayCommand _addCard;
+
+        RelayCommand AddCard
+        {
+            get
+            {
+                return _addCard ??( _addCard = new RelayCommand((o) =>
+                {
+                    SingleTon.DB.Add(new card() { Cardnum = int.Parse(cardnum), Pincode = int.Parse(Pincode) });
+                    SingleTon.DB.SaveChanges();
+                }));
+            }
+        }
+
+
+        //public AddCard addCard { get; set; }
         public void Datacontextforr(User User)
         {
             //user = new User();
@@ -25,10 +43,10 @@ namespace WpfApp1.viewmodel
             user = new User();
             Authorise.DataContext = user;
         }
-        public void Datacontextforc(card Card)
-        {
-            addCard.DataContext = Card;
-        }
+        //public void Datacontextforc(card Card)
+        //{
+        //    addCard.DataContext = Card;
+        //}
         public void register()
         {
             reg Reg = new reg(this);

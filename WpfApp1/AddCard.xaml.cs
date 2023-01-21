@@ -25,8 +25,8 @@ namespace WpfApp1
         {
             InitializeComponent();
             binding = allBinding;
-            binding.addCard = this;
-            binding.Datacontextforc(binding.user.Card);
+            //binding.addCard = this;
+            //binding.Datacontextforc(binding.user.Card);
         }
 
         private void go(object sender, RoutedEventArgs e)
