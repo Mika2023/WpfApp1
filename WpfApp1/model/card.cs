@@ -11,7 +11,7 @@ namespace WpfApp1.model
     public class card
     {
         public int ID { get; set; }
-        //public User user { get; set; } = null!;
+        public User user { get; set; } = null!;
         public int Balance { get; set; }
         public int cardnum { get; set; }
         public int Pincode { get; set; }

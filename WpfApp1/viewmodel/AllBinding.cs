@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using WpfApp1.model;
 using WpfApp1.Pattern;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 
 namespace WpfApp1.viewmodel
 {
-    public class AllBinding
+    public class AllBinding: INotifyPropertyChanged
     {
         public User user { get; set; } = null!;
         public authorise Authorise { get; set; }
@@ -17,7 +18,9 @@ namespace WpfApp1.viewmodel
         public string cardnum { get;set;}
         public string Pincode { get; set; }
 
-        RelayCommand _addCard;
+        RelayCommand? _addCard;
+
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         RelayCommand AddCard
         {
